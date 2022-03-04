@@ -3,10 +3,12 @@
 結果が合っているかは保証できない。
 
 ## 使い方
+```
 $ python author_counter.py [DOI] [name]
+```
 
-DOI: 調べたい論文の DOI。例) doi.org/10.1103/PhysRevLett.119.112002
-name: 調べたい名前。例) "G. Nukazuka"
+- DOI: 調べたい論文の DOI。例) doi.org/10.1103/PhysRevLett.119.112002
+- name: 調べたい名前。例) "G. Nukazuka"
 
 使用例
 

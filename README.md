@@ -16,14 +16,21 @@ $ python author_counter.py [name] [DOI]
 - name: 調べたい名前。例) "G. Nukazuka"
 - DOI: 調べたい論文の DOI。例) doi.org/10.1103/PhysRevLett.119.112002
 
-使用例
+### 使用例
 
 ```
-$ python author_counter.py "G. Nukazuka" doi.org/10.1103/PhysRevLett.119.112002
+ $ python author_counter.py "G. Nukazuka" doi.org/10.1103/PhysRevLett.119.112002
 Counting when G. Nukazuka appears in doi.org/10.1103/PhysRevLett.119.112002
-142 G. Nukazuka
-{u'affiliation': [], u'given': u'G.', u'family': u'Nukazuka', u'sequence': u'additional'}
+ - Title: First Measurement of Transverse-Spin-Dependent Azimuthal Asymmetries in the Drell-Yan Process
+ - First author: M. Aghasyan
+ - Your info:
+     142 / 224 G. Nukazuka
+ - Last author: {u'affiliation': [], u'name': u'COMPASS Collaboration', u'sequence': u'additional'}
 ```
+
+First, last オーサーも一応表示している。
+ラストオーサーにコラボレーション名が入ることもあり、表示している著者数にカウントされている。
+全体で何人かも知りたいときは、1 を引いてあげよう。
 
 ## 開発状況とか
 ú といった文字がうまくいくか未確認。

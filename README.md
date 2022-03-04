@@ -9,6 +9,7 @@ DOI: 調べたい論文の DOI。例) doi.org/10.1103/PhysRevLett.119.112002
 name: 調べたい名前。例) "G. Nukazuka"
 
 使用例
+
 `
 $ python author_counter.py doi.org/10.1103/PhysRevLett.119.112002 "G. Nukazuka"
 Counting when G. Nukazuka appears in doi.org/10.1103/PhysRevLett.119.112002

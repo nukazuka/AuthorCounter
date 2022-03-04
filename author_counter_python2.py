@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import sys
 from crossref.restful import Works
-import pprint
 import codecs
 
 sys.stdout = codecs.getwriter('utf_8')(sys.stdout)
@@ -12,7 +11,10 @@ def AuthorCounter( doi, person ):
     works = Works()
 
     paper = works.doi( doi )
+    print " - Title:", paper[ "title" ][0]
     list = paper[ "author" ]
+
+    print " - First author:", list[0][ "given" ], list[0][ "family" ]
     
     for num, info in enumerate( list ) :
         if "given" in info :
@@ -22,8 +24,9 @@ def AuthorCounter( doi, person ):
             full_name += " " + info[ "family" ]
 
         if full_name == person :
-            print num+1, full_name
-            print info
+            print " - Your info:"
+            print "    ", num+1, "/", len( list ), full_name
+            print " - Last author:", list[ -1 ]
             return
 
     print "Not found"
@@ -36,10 +39,7 @@ if __name__ == "__main__" :
         print "Usage: python author_counter.py [name to be checked] [DOI]"
         exit( 0 )
 
-    #person = "G. Nukazuka"
-    #doi = "10.1103/PhysRevD.105.032003 "
-
-    doi = args[1]
-    person = args[2]
+    doi = args[2]
+    person = args[1]
 
     AuthorCounter( doi, person  )

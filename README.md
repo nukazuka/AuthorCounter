@@ -10,12 +10,12 @@ name: 調べたい名前。例) "G. Nukazuka"
 
 使用例
 
-`
+```
 $ python author_counter.py doi.org/10.1103/PhysRevLett.119.112002 "G. Nukazuka"
 Counting when G. Nukazuka appears in doi.org/10.1103/PhysRevLett.119.112002
 142 G. Nukazuka
 {u'affiliation': [], u'given': u'G.', u'family': u'Nukazuka', u'sequence': u'additional'}
-`
+```
 
 ## 開発状況とか
 ú といった文字がうまくいくか未確認。
